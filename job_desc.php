@@ -1,0 +1,238 @@
+<?php
+
+echo '
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https:fonts.googleapis.com">
+    <link rel="preconnect" href="https:fonts.gstatic.com" crossorigin>
+    <link
+      href="https:fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="Job">
+      <div class="Back-Report-Container">
+        <div class="Back-Container">
+          <img src="style/back.png" class="Back-Icon">
+          <a href="http://localhost/job-practice/index.php?type=job" class="Back">Back</a>
+        </div>
+        <div class="Report-Container">
+          <img src="style/report.png" class="Report-img">
+          <div class="Report">Report</div>
+        </div>
+      </div>
+      <div class="Job-Section">
+        <div class="Job-Description-Section">
+          <div class="About-Section">
+            <div class="About-Title-Container">
+              <div class="About-The-Company-Text">About the company</div>
+            </div>
+            <div class="About-The-Company">
+              <div class="Company-Name-Type-Openlink-Container">
+                <div class="Company-Logo-Name-Type-Container">
+                  <div class="Company-Logo-Container">
+                    <img class="Company-Logo"
+                      src="' . $companyLogo . '">
+                  </div>
+                  <div class="Company-Name-Type-Container">
+                    <div class="Company-Name">' . $companyName . '</div>
+                    <div class="Company-Type"> Multinational Technology Company
+                    </div>
+                  </div>
+                </div>
+                <div class="Open-Link-Container">
+                  <img src="style/link.png" class="Link-Icon">
+                  <a href="https:en.wikipedia.org/wiki/Google" target="blank"
+                    class="Open-Link">Open link</a>
+                </div>
+              </div>
+              <div class="Location-Capacity">
+                ' . $companyLocation . ' &bull; 25000 - 26000 employees
+              </div>
+              <div class="Company-Description">
+                Google is a multinational technology company that provides a
+                wide range of internet-related services
+                and products, including its popular search engine, advertising
+                platforms, cloud computing solutions,
+                productivity tools, mobile operating system, mapping and
+                navigation services, video sharing
+                platform, and
+                artificial intelligence technologies. With its mission to
+                organize the world\'s information and make
+                it
+                universally accessible, Google continues to innovate and create
+                products that enhance the way people
+                find
+                information, connect, collaborate the digital world.
+              </div>
+            </div>
+          </div>
+          <div class="Job-Description-Hashtag-Section">
+            <img src="style/job-flag.png" class="job-flag">
+            <div class="Job-Description-Container">
+              <div class="Job-Title-Skills-Description-Container">
+                <div class="Job-Title">' . $jobTitle . '</div>
+                <div class="Taka-Location-Time-Applicant">
+                  TK. 1,50,000 (Negotiable) &bull; ' . $location . ' &bull; ' . $dateDisplay . ' &bull; ' . $noOfPeopleApplied . ' applicants
+                </div>
+                <div class="Skills-Container">
+                  <div class="Skills-Preferred">Skills preferred:</div>
+                  <div class="Job-Hashtag-container">
+                    <div class="Hashtag">
+                      <div class="Job-Hashtag">Java</div>
+                    </div>
+                    <div class="Hashtag">
+                      <div class="Job-Hashtag">C++</div>
+                    </div>
+                    <div class="Hashtag">
+                      <div class="Job-Hashtag">Python</div>
+                    </div>
+                    <div class="Hashtag">
+                      <div class="Job-Hashtag">JS</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Description-Container">
+                <div class="Job-Description-Headline">About the job</div>
+                <div class="Job-Description-Text text-spacing">
+                  The software engineer position is a crucial role within our
+                  company, where you will have the
+                  opportunity to work on cutting-edge projects and contribute to
+                  the development of innovative
+                  software
+                  solutions. As a software engineer, you will be responsible for
+                  designing, developing, and
+                  maintaining
+                  high-quality software applications that meet the needs of our
+                  clients and users. This role offers
+                  a
+                  dynamic and collaborative work environment, where you will
+                  have the chance to work closely with
+                  cross-functional teams and leverage your technical expertise
+                  to drive impact results.
+                </div>
+              </div>
+              <div class="Description-Container">
+                <div class="Job-Description-Headline">Responsibilities</div>
+                <div class="Job-Description-Text text-spacing">
+                  <li>
+                    Collaborate with managers, designers, and stakeholders to
+                    translate them into technical
+                    specifications.
+                  </li>
+                  <li>
+                    Design and develop software applications, ensuring clean,
+                    efficient, and maintainable code.
+                  </li>
+                  <li>
+                    Conduct thorough testing and debugging to identify and
+                    resolve software defects and issues.
+                  </li>
+                  <li>
+                    Participate in code reviews to provide and receive
+                    constructive feedback for continuous
+                    improvement.
+                  </li>
+                  <li>
+                    Stay up-to-date with emerging technologies and industry
+                    trends to contribute innovative ideas and
+                    solutions.
+                  </li>
+                  <li>
+                    Collaborate with team members to improve development
+                    processes and best practices.
+                  </li>
+                </div>
+                <div class="Description-Container">
+                  <div class="Job-Description-Headline">Requirements</div>
+                  <div class="Job-Description-Text text-spacing">
+                    <li>
+                      Bachelor\'s degree in Computer Science, Software
+                      Engineering, or a related field (or equivalent
+                      practical experience).
+                    </li>
+                    <li>
+                      Strong programming skills in languages such as Java, C++,
+                      Python, or JavaScript.
+                    </li>
+                    <li>
+                      Proficiency in software development frameworks and tools.
+                    </li>
+                    <li>
+                      Solid understanding of software engineering principles,
+                      data structures, and algorithms.
+                    </li>
+                    <li>
+                      Experience with version control systems, such as Git.
+                    </li>
+                    <li>
+                      Excellent problem-solving and analytical skills.
+                    </li>
+                    <li>
+                      Strong communication and collaboration abilities.
+                    </li>
+                  </div>
+                </div>
+                <div class="Description-Container">
+                  <div class="Job-Description-Headline">Benefits</div>
+                  <div class="Job-Description-Text text-spacing">
+                    <li>
+                      Competitive salary and comprehensive benefits package.
+                    </li>
+                    <li>
+                      Opportunity to work on challenging and impact projects.
+                    </li>
+                    <li>
+                      Continuous learning and professional development
+                      opportunities.
+                    </li>
+                    <li>
+                      Collaborative and inclusive work environment.
+                    </li>
+                    <li>
+                      Flexible work hours and remote work options.
+                    </li>
+                    <li>
+                      Health and wellness benefits.
+                    </li>
+                  </div>
+                </div>
+              </div>
+              <div class="Conclusion">
+                As a software engineer at our company, you will play a crucial
+                role in developing innovative software
+                solutions and contributing to the success of our organization.
+                This position offers exciting
+                challenges,
+                opportunities for growth, and a supportive work environment. If
+                you are passionate about software
+                development, have a strong technical background, and thrive in a
+                collaborative setting, we encourage
+                you
+                to apply and join our talented team of software engineers.
+              </div>
+              <div style="width: 100%;">
+                <div class="Hashtags-Container">
+                  <div class="Hashtags">Hashtags:</div>
+                  <div class="Hashtags-List">' . $hashtags . '</div>
+                </div>
+              </div>
+            </div>
+            <div class="Apply-Now-Container">
+              <button class="Apply-Now">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+  </html>
+  ';
+?>
