@@ -1,0 +1,10 @@
+1.Style attrubute-Inline-Directly on the component
+2.Style tag
+3.Separate CSS File
+
+
+2.CSS Selector:
+i.id-->#  <button id="btn1"> ==> #btl1
+ii.class-->.  
+
+margin:0px 10px

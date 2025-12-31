@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100vw;
+    height: 10vh;
+    background-color: white;
+    display: flex; 
+    justify-content: space-between;
+}
+.btn1{
+    border:none;
+    height: 5vh;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.parent_left_right{
+    width: 100vw;
+    height: 90vh;
+}
+
+.left{
+    width: 50vw;
+    height: 90vh;
+    background-color: blue;
+}
+
+.right{
+    width: 50vw;
+    height: 90vh;
+    background-color: white;
+}
+
+.main{
+   width: 30vw;
+    height: 50vh;
+    background-color: white;
+    margin: 150px;
+}
+
+.btn2{
+    width: 25vw;
+    height: 5vh;
+    border-radius: 8px;
+    border: 2px;
+    box-shadow: 2px 3px 15px 1px rgba(0,0,0,0.3);
+    background-color: white;
+}
+.btn3{
+    width: 10vw;
+    height: 5vh;
+    border-radius: 8px;
+    border: 2px;
+    box-shadow: 2px 3px 15px 1px rgba(0,0,0,0.3);
+    background-color: white;
+}

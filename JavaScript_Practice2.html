@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="num">
+        <button id="btn2" onclick="guesscompare()">Submit</button>
+        <label id="output"></label>
+    </div>
+</body>
+<script>
+    let secretnumber = Math.floor(Math.random() * (5000 - 500 + 1)) + 500;
+    let attempt = 0;
+    function guesscompare(){
+         attempt = attempt + 1;
+         let n = document.getElementById("num").value;
+         if(n == secretnumber){
+            document.getElementById("output").innerHTML="Correct";
+            document.getElementById("num").disabled=true;
+         }
+         if(n > secretnumber){
+            document.getElementById("output").innerHTML="Too high!";
+         }
+         if(n < secretnumber){
+            document.getElementById("output").innerHTML="Too low!";
+         }
+         if(attempt > 5){
+            document.getElementById("output").innerHTML="Out of guesses!";
+            document.getElementById("num").disabled=true;
+         }
+         
+         
+    }
+</script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #fff;
+      width: 150px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 7px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .title {
+      font-size: 9px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .price {
+      color: green;
+      font-size: 8px;
+      margin: 3px 0;
+    }
+
+    .desc {
+      font-size: 7px;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .availability {
+      font-weight: bold;
+      margin: 5px 0;
+      color: blue;
+    }
+
+    .btn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 7px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="images.jpg" alt="Product Image">
+    <div class="title">Wireless Mouse</div>
+    <div class="price">$24.99</div>
+    <div class="desc">A simple wireless mouse with long battery life and smooth performance.</div>
+    <div class="availability">In Stock</div>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+</body>
+</html>

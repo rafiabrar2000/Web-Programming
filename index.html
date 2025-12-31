@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantity: <input type="number" id="quantity"><br>
+    Home Delivery: <input type="radio" name="r" id="hd">Yes<input type="radio" name="r">No<br>
+    Address: <select id="address">
+        <option disabled selected hidden>Select City</option>
+        <option value="dhk">Dhaka</option>
+        <option value="ctg">Chittagong</option>
+    </select><br>
+    Tip: <input type="number" id="tip"><br>
+    <button onclick="CalculateBill();">Generate Bill</button>
+    Your total bill is <label id="bill_placeholder"></label> BDT
+</body>
+<script>
+    function CalculateBill(){
+        let quantity = Number(document.getElementById('quantity').value);
+        let hd = document.getElementById('hd').checked;
+        let address = document.getElementById('address').value;
+        let tip = Number(document.getElementById('tip').value);
+        let base = quantity * 12.5;
+        if(quantity >=1 && quantity <=9){
+            base = base * 0.90 ;
+        }
+        else if(quantity >=10 && quantity <=19){
+            base = base * 0.85 ;
+        }
+        else if(quantity >=20){
+            base = base * 0.80 ;
+        }
+        if(hd){
+            base  = base + 40;
+        }
+        if(address == "dhk"){
+            base = base * 1.20;
+        }
+        else{
+            base = base * 1.15;
+        }
+        base = base + tip; 
+        document.getElementById('bill_placeholder').innerText = base;
+
+    }
+</script>
+</html>

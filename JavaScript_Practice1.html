@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="password" id="password" />
+      <button onclick="checkstrength()" id="btn">Check Strength</button>
+    </div>
+  </body>
+  <script>
+    let attempt = 0;
+    function checkstrength() {
+      let score = 0;
+      let inp = document.getElementById("password");
+      let inpvalue = inp.value;
+      let lng = inpvalue.length;
+
+      if (lng < 6) {
+        alert("Very Weak");
+        return;
+      }
+
+      score = score + (Math.floor(lng / 2) * 10);
+
+      if (/[A-Z]/.test(inpvalue)) {
+        score = score + 15;
+      }
+      if (/[a-z]/.test(inpvalue)) {
+        score = score + 15;
+      }
+      if (/[0-9]/.test(inpvalue)) {
+        score = score + 20;
+      }
+      if (/[!@#$%^&*]/.test(inpvalue)) {
+        score = score + 25;
+      }
+
+      if (score >= 0 && score <= 30) {
+        alert("Very Weak" + score);
+      } else if (score >= 31 && score <= 50) {
+        alert("Weak" + score);
+      } else if (score >= 51 && score <= 70) {
+        alert("Medium" + score);
+      } else if (score >= 71 && score <= 90) {
+        alert("Strong" + score);
+      } else if (score >= 91 && score  <= 100) {
+        alert("Very Strong" + score);
+      } else if (score > 100) {
+        alert("Perfect Password!" + score);
+      }
+
+      attempt = attempt + 1;
+
+      if (attempt > 8 && score < 71) {
+        alert("Need practice!");
+      }
+    }
+  </script>
+</html>

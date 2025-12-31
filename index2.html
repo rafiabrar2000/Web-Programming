@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <label for="qty">Quantity</label>
+    <input type="number" id="qty" min="1" placeholder="Enter quantity" required>
+</br>
+    <label>Home Delivery</label>
+    <input type="radio" name="delivery" value="yes"> Yes
+    <input type="radio" name="delivery" value="no" checked> No
+</br>
+    <label for="address">Address</label>
+    <textarea id="address" rows="2" placeholder="Enter city (Dhaka / Chittagong / others)"></textarea>
+</br>
+    <label for="tip">Tip (BDT)</label>
+    <input type="number" id="tip" min="0" placeholder="Enter tip">
+</br>
+    <button onclick="generateBill()">Generate Bill</button>
+</br>   
+    <div class="result" id="result"></div>
+  
+</body>
+<script>
+     function generateBill() {
+        const qty = parseInt(document.getElementById("qty").value) || 0;
+        const delivery = document.querySelector('input[name="delivery"]:checked').value;
+        const address = document.getElementById("address").value.trim().toLowerCase();
+        const tip = parseFloat(document.getElementById("tip").value) || 0;
+  
+        const pricePerPineapple = 12.5;
+        let baseAmount = qty * pricePerPineapple;
+  
+        // Apply discount
+        let discount = 0;
+        if (qty >= 1 && qty <= 9) discount = 0.10;
+        else if (qty >= 10 && qty <= 19) discount = 0.15;
+        else if (qty >= 20) discount = 0.20;
+        
+        let discountedAmount = baseAmount - (baseAmount * discount);
+  
+        // Add delivery charge
+        if (delivery === "yes") discountedAmount += 40;
+  
+        // Apply tax based on address
+        if (address.includes("dhaka")) {
+          discountedAmount += discountedAmount * 0.20;
+        } else if (address.includes("chittagong")) {
+          discountedAmount += discountedAmount * 0.15;
+        }
+  
+        // Add tip
+        let total = discountedAmount + tip;
+  
+        document.getElementById("result").innerText = 
+          "Your total bill is : " + total.toFixed(2) + " BDT";
+      }
+
+</script>
+</html>

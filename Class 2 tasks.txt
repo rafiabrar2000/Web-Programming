@@ -1,0 +1,9 @@
+1.Use a form tag.
+2.Make the name,password and email fields mandatory
+3.Use regular expressions in Email Field.
+4.Add an image (downloaded from google) above the table.
+5.Add a "Forget Password" url just below the image.
+
+regex101.com
+
+List
